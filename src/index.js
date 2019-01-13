@@ -1,6 +1,13 @@
 import { PixelRatio, Dimensions } from 'react-native';
 
-export const RESIZE_MODE = {
+export default {
+    RESIZE_MODE: _RESIZE_MODE,
+    getThumbnail: _getThumbnail,
+    setDefSizeAvatarUrl: _setDefSizeAvatarUrl,
+    getDefSizeAvatarUrl: _getDefSizeAvatarUrl,
+};
+
+const _RESIZE_MODE = {
     LFIT: 'lfit',
     MFIT: 'mfit',
     FILL: 'fill',
@@ -8,7 +15,7 @@ export const RESIZE_MODE = {
     FIXED: 'fixed',
 };
 
-export function getThumbnail(url, height, width = height, scaleType = RESIZE_MODE.MFIT) {
+function _getThumbnail(url, height, width = height, scaleType = _RESIZE_MODE.MFIT) {
     if (typeof url === 'undefined') {
         return undefined;
     }
@@ -29,10 +36,10 @@ export function getThumbnail(url, height, width = height, scaleType = RESIZE_MOD
 
 let defSize = 32;
 
-export function setDefSizeAvatarUrl(size) {
+function _setDefSizeAvatarUrl(size) {
     defSize = size;
 }
 
-export function getDefSizeAvatarUrl(url) {
-    return getThumbnail(url, defSize, defSize);
+function _getDefSizeAvatarUrl(url) {
+    return _getThumbnail(url, defSize, defSize);
 }
