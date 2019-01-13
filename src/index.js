@@ -1,18 +1,18 @@
 import { PixelRatio, Dimensions } from 'react-native';
 
-export default {
-    RESIZE_MODE: _RESIZE_MODE,
-    getThumbnail: _getThumbnail,
-    setDefSizeAvatarUrl: _setDefSizeAvatarUrl,
-    getDefSizeAvatarUrl: _getDefSizeAvatarUrl,
-};
-
 const _RESIZE_MODE = {
     LFIT: 'lfit',
     MFIT: 'mfit',
     FILL: 'fill',
     PAD: 'pad',
     FIXED: 'fixed',
+};
+
+export default {
+    RESIZE_MODE: _RESIZE_MODE,
+    getThumbnail: _getThumbnail,
+    setDefSizeAvatarUrl: _setDefSizeAvatarUrl,
+    getDefSizeAvatarUrl: _getDefSizeAvatarUrl,
 };
 
 function _getThumbnail(url, height, width = height, scaleType = _RESIZE_MODE.MFIT) {
