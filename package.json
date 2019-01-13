@@ -1,0 +1,13 @@
+{
+  "name": "@hecom/aliyun",
+  "version": "0.0.1",
+  "description": "Aliyun Utility",
+  "main": "dist/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:hecom/aliyun.git"
+  },
+  "author": "Xiaosong Gao",
+  "license": "MIT"
+}
